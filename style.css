@@ -1,0 +1,298 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  font-style: italic;
+  font-family: "Montserrat", "Segoe UI", Tahoma, Geneva, Verdana, sans-seri;
+}
+body {
+  /* background: linear-gradient(
+      to bottom,
+      rgba(255, 0, 0, 0.3),
+      rgba(255, 0, 0, 0.3)
+    ),
+    url(./th.jfif); */
+  background-image: url(./th.jfif);
+}
+
+nav {
+  display: flex;
+  background-color: white;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 50px;
+  border-bottom: 5px double black;
+  height: 10vh;
+  position: sticky;
+  top: 0%;
+  z-index: 99999;
+}
+nav img {
+  max-width: 80px;
+  padding: 3px;
+}
+.navTabs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  margin: 0 10px;
+}
+.navTabs > li {
+  margin: 0 20px;
+}
+.navTabs a {
+  color: black;
+  text-decoration: none;
+}
+.navTabs a:hover {
+  text-decoration: underline double;
+}
+.homeMainContainer,
+.aboutMainContainer,
+.projectMainContainer {
+  height: 90vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.homeContainer {
+  background-color: white;
+  display: flex;
+  width: 80vw;
+  height: 70vh;
+  padding: 5vh;
+  justify-content: space-between;
+  align-items: center;
+  border: 5px double black;
+}
+.homeText {
+  text-align: center;
+}
+#myFace {
+  max-width: 100%;
+  min-width: 200px;
+}
+.resume {
+  padding: 5px 10px;
+  outline: 2px solid black;
+  outline-offset: 2px;
+}
+.resume:hover {
+  outline-offset: 4px;
+}
+.aboutContainer {
+  background-color: white;
+  width: 80vw;
+  height: 70vh;
+  padding: 5vh;
+  border: 5px double black;
+}
+.projectContainer {
+  background-color: white;
+  width: 80vw;
+  height: 80vh;
+  padding: 5vh;
+  border: 5px double black;
+}
+.aboutGrid,
+.portfolioGrid {
+  display: flex;
+  justify-content: space-between;
+}
+.aboutGrid > div {
+  border: 5px double black;
+  width: 30%;
+}
+.portfolioGrid > div {
+  height: 50vh;
+  width: 25%;
+  /* background-image: url(card.jpg);
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: center; */
+}
+.portfolioGrid > div > p {
+  background-color: white;
+}
+
+.portfolioGrid {
+  display: flex;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 30vw;
+  border: 5px double black;
+  padding: 10px;
+}
+form button {
+  padding: 5px 10px;
+  outline: 2px solid black;
+  outline-offset: 2px;
+}
+form button:hover {
+  outline-offset: 4px;
+}
+
+/* .contactMainContainer {
+ 
+} */
+.contactContainer {
+  display: flex;
+  border-top: 5px double black;
+  background-color: white;
+  justify-content: space-between;
+  padding: 5vh 10vh 1vh 10vh;
+}
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 5vw;
+}
+.icon {
+  padding: 5px;
+  transform: scale(2);
+  margin-bottom: 5vh;
+}
+.icon > a > i {
+  color: black;
+}
+.icon:hover {
+  transform: scale(3);
+}
+/* ----------------------flip Card----------------- */
+.flip-card {
+  perspective: 1000px;
+}
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+.front,
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+.front {
+  /* background-color: #bbb; */
+  background-image: url(card.jpg);
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: center;
+  color: black;
+  border: 5px double black;
+  box-shadow: 5px 5px 10px;
+}
+
+/* Style the back side */
+.back {
+  background-color: gainsboro;
+  color: black;
+  transform: rotateY(180deg);
+  border: 5px double black;
+  box-shadow: 5px 5px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+/* ---------------------------------MEDIA QUERY-------------------------  */
+
+@media screen and (max-width: 1000px) {
+  #myFace {
+    display: none;
+  }
+
+  nav {
+    flex-direction: column;
+    height: 100%;
+  }
+  .aboutGrid {
+    flex-direction: column;
+    gap: 1vh;
+  }
+  .aboutGrid > div {
+    width: 100%;
+  }
+  .aboutContainer,
+  .aboutMainContainer {
+    height: 100%;
+  }
+  .aboutContainer,
+  .homeContainer,
+  .projectContainer {
+    width: 90vw;
+    justify-content: center;
+  }
+  .projectContainer,
+  .projectMainContainer {
+    height: 100%;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+  }
+  .portfolioGrid {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+  }
+  .portfolioGrid > div {
+    width: 40%;
+  }
+  .contactContainer {
+    flex-direction: column;
+  }
+  fieldset {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .portfolioGrid > div {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .navTabs {
+    flex-direction: column;
+    padding: 0;
+  }
+  nav {
+    height: 100%;
+    justify-items: center;
+  }
+  .homeContainer {
+    width: 90vw;
+  }
+  .contactContainer {
+    padding: 10px;
+  }
+  .portfolioGrid > div {
+    width: 80%;
+  }
+  .projectContainer {
+    padding: 10px;
+  }
+}
