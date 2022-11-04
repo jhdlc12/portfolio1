@@ -21,12 +21,22 @@
   <body>
     
     <nav>
-      <div><img src="jh.png" alt="logo" /></div>
+      <div class="imageContainer"><img src="jh.png" alt="logo" /></div>
       <ul class="navTabs">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">Abouts</a></li>
         <li><a href="#project">Projects</a></li>
         <li><a href="contact">Contacts</a></li>
+        <li><form class="color-picker">
+          <fieldset >
+            <legend class="visually-hidden">Pick a color scheme</legend>
+            <label for="theme" class="visually-hidden">white</label>
+            <input type="radio" name="theme" id="white" checked>
+            <label for="theme" class="visually-hidden">Black</label>
+            <input type="radio" name="theme" id="black"  >
+         
+          </fieldset>
+        </form></li>
       </ul>
     </nav>
 
@@ -44,7 +54,7 @@
               ><button class="resume"><div>Resume</div></button></a
             >
           </div>
-          <div><img src="face.png" alt="myFace"  id="myFace"/></div>
+          <div class="imageContainer"><img src="face.png" alt="myFace"  id="myFace"/></div>
         </div>
     </div>
 </div>
@@ -199,6 +209,8 @@
                 <p>Email: jhdlc12@gmail.com</p>
                 <p>Contact Number: 0928-420-9222</p>
                 <p>Address: Chestnut dr. Capitol Garden Gate III, San Roque Tarlac City, Philippines</p>
+                <br/>
+                <p>This Website Used HTML and CSS</p>
             </div>
             <br/>
             <div class="icons">
@@ -231,7 +243,7 @@
                 <input type="email" name="email" id="email">
                 <label >Message</label>
                 <textarea id="message" name="message" rows="4" cols="50" ></textarea>
-                <button type="submit">Send</button>
+                <button type="submit" class="send">Send</button>
             </fieldset>
             
         </form>

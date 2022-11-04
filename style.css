@@ -4,25 +4,27 @@
   margin: 0;
   font-style: italic;
   font-family: "Montserrat", "Segoe UI", Tahoma, Geneva, Verdana, sans-seri;
+  color: var(--clr-line-color);
 }
+:root {
+  --clr-line-color: black;
+  --clr-bg-color: white;
+  --clr--invert-color: 0%;
+}
+
 body {
-  /* background: linear-gradient(
-      to bottom,
-      rgba(255, 0, 0, 0.3),
-      rgba(255, 0, 0, 0.3)
-    ),
-    url(./th.jfif); */
-  background-image: url(./th.jfif);
+  background: url(./th.jfif);
+  /* background-image: url(./th.jfif); */
 }
 
 nav {
   display: flex;
-  background-color: white;
+  background-color: var(--clr-bg-color);
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 5px 50px;
-  border-bottom: 5px double black;
+  border-bottom: 5px double var(--clr-line-color);
   height: 10vh;
   position: sticky;
   top: 0%;
@@ -44,7 +46,7 @@ nav img {
   margin: 0 20px;
 }
 .navTabs a {
-  color: black;
+  color: var(--clr-line-color);
   text-decoration: none;
 }
 .navTabs a:hover {
@@ -59,15 +61,18 @@ nav img {
   align-items: center;
   justify-content: center;
 }
+.imageContainer {
+  filter: invert(var(--clr--invert-color));
+}
 .homeContainer {
-  background-color: white;
+  background-color: var(--clr-bg-color);
   display: flex;
   width: 80vw;
   height: 70vh;
   padding: 5vh;
   justify-content: space-between;
   align-items: center;
-  border: 5px double black;
+  border: 5px double var(--clr-line-color);
 }
 .homeText {
   text-align: center;
@@ -78,25 +83,27 @@ nav img {
 }
 .resume {
   padding: 5px 10px;
-  outline: 2px solid black;
+  border: 2px solid var(--clr-line-color);
+  outline: 2px solid var(--clr-line-color);
   outline-offset: 2px;
+  background-color: var(--clr-bg-color);
 }
 .resume:hover {
   outline-offset: 4px;
 }
 .aboutContainer {
-  background-color: white;
+  background-color: var(--clr-bg-color);
   width: 80vw;
   height: 70vh;
   padding: 5vh;
-  border: 5px double black;
+  border: 5px double var(--clr-line-color);
 }
 .projectContainer {
-  background-color: white;
+  background-color: var(--clr-bg-color);
   width: 80vw;
   height: 80vh;
   padding: 5vh;
-  border: 5px double black;
+  border: 5px double var(--clr-line-color);
 }
 .aboutGrid,
 .portfolioGrid {
@@ -104,7 +111,7 @@ nav img {
   justify-content: space-between;
 }
 .aboutGrid > div {
-  border: 5px double black;
+  border: 5px double var(--clr-line-color);
   width: 30%;
 }
 .portfolioGrid > div {
@@ -116,24 +123,24 @@ nav img {
   background-position-y: center; */
 }
 .portfolioGrid > div > p {
-  background-color: white;
+  background-color: var(--clr-bg-color);
 }
 
 .portfolioGrid {
   display: flex;
 }
 
-fieldset {
+.contactContainer fieldset {
   display: flex;
   flex-direction: column;
   gap: 10px;
   width: 30vw;
-  border: 5px double black;
+  border: 5px double var(--clr-line-color);
   padding: 10px;
 }
 form button {
   padding: 5px 10px;
-  outline: 2px solid black;
+  outline: 2px solid var(--clr-line-color);
   outline-offset: 2px;
 }
 form button:hover {
@@ -145,8 +152,8 @@ form button:hover {
 } */
 .contactContainer {
   display: flex;
-  border-top: 5px double black;
-  background-color: white;
+  border-top: 5px double var(--clr-line-color);
+  background-color: var(--clr-bg-color);
   justify-content: space-between;
   padding: 5vh 10vh 1vh 10vh;
 }
@@ -154,6 +161,10 @@ form button:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+}
+.send {
+  color: var(--clr-line-color);
+  background-color: var(--clr-bg-color);
 }
 .icons {
   display: flex;
@@ -168,7 +179,7 @@ form button:hover {
   margin-bottom: 5vh;
 }
 .icon > a > i {
-  color: black;
+  color: var(--clr-line-color);
 }
 .icon:hover {
   transform: scale(3);
@@ -198,25 +209,79 @@ form button:hover {
 }
 .front {
   /* background-color: #bbb; */
-  background-image: url(card.jpg);
+  background: url(card.jpg);
   background-size: cover;
   background-position-x: center;
   background-position-y: center;
-  color: black;
-  border: 5px double black;
+  color: var(--clr-bg-color);
+  border: 5px double var(--clr-line-color);
   box-shadow: 5px 5px 10px;
 }
 
 /* Style the back side */
 .back {
-  background-color: gainsboro;
+  background-color: rgb(149, 145, 145);
   color: black;
   transform: rotateY(180deg);
-  border: 5px double black;
+  border: 5px double var(--clr-line-color);
   box-shadow: 5px 5px 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+}
+/* ---------color theme---------*/
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.color-picker > fieldset {
+  border: 0;
+  display: flex;
+  gap: 1rem;
+  /* border: 5px double var(--clr-line-color); */
+  width: fit-content;
+  background: rgb(149, 145, 145);
+  padding: 0.7rem;
+  margin-inline: auto;
+  border-radius: 1rem;
+  position: fixed;
+  top: 0%;
+  right: 0%;
+}
+.color-picker input[type="radio"] {
+  appearance: none;
+  width: 0.8rem;
+  height: 0.8rem;
+  outline: 3px solid var(--radio-color, currentColor);
+  outline-offset: 3px;
+  border-radius: 50%;
+}
+.color-picker input[type="radio"]:checked {
+  background-color: var(--radio-color);
+}
+
+#black {
+  --radio-color: black;
+}
+#white {
+  --radio-color: white;
+}
+
+:root:has(#white:checked) {
+  --clr-line-color: black;
+  --clr-bg-color: white;
+  --clr--invert-color: 0%;
+}
+:root:has(#black:checked) {
+  --clr-line-color: white;
+  --clr-bg-color: black;
+  --clr--invert-color: 100%;
 }
 
 /* ---------------------------------MEDIA QUERY-------------------------  */
@@ -265,13 +330,16 @@ form button:hover {
   .contactContainer {
     flex-direction: column;
   }
-  fieldset {
+  .contactContainer fieldset {
     width: 100%;
   }
 }
 @media screen and (max-width: 800px) {
   .portfolioGrid > div {
     width: 70%;
+  }
+  .color-picker > fieldset {
+    scale: 0.6;
   }
 }
 @media screen and (max-width: 600px) {
