@@ -26,8 +26,8 @@
         <li><a href="#home">Home</a></li>
         <li><a href="#about">Abouts</a></li>
         <li><a href="#project">Projects</a></li>
-        <li><a href="contact">Contacts</a></li>
-        <li><form class="color-picker">
+        <li><a href="#contact">Contacts</a></li>
+        <!-- <li><form class="color-picker">
           <fieldset >
             <legend class="visually-hidden">Pick a color scheme</legend>
             <label for="theme" class="visually-hidden">white</label>
@@ -36,7 +36,7 @@
             <input type="radio" name="theme" id="black"  >
          
           </fieldset>
-        </form></li>
+        </form></li> -->
       </ul>
     </nav>
 
@@ -44,14 +44,16 @@
     <div class="homeContainer">
         <div class="homeText">
             <h1>Hi! I am</h1>
-            <h2 id="demo">JOHN HAROLD T. DELA CRUZ</h2>
+            <h2 id="demo"></h2>
+      
+
             <h4>Your Future Full-stack Web Developer</h4>
             <p>
-              A proud student of Kodego who is studying to being a Full-stack Web
+              A proud student of Kodego who graduated as a Full-stack Web
               Developer.
             </p>
-            <a href="resume.pdf" download
-              ><button class="resume"><div>Resume</div></button></a
+            <a href="Resume.pdf" download
+              ><button class="resume animated"><div>Resume</div></button></a
             >
           </div>
           <div class="imageContainer"><img src="face.png" alt="myFace"  id="myFace"/></div>
@@ -66,17 +68,26 @@
               <div>
                 <p><u>Skills and Proficiency</u></p>
                 <p>Web Development skills</p>
-                <ul>
-                  <li>HTML</li>
-                  <li>CSS</li>
-                  <li>JavaScript</li>
-                  <li>GitHub</li>
-                </ul>
+                <div style="display: flex;">
+                  <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>ReactJS</li>
+                  </ul>
+                  <ul>
+                    <li>NodeJs</li>
+                    <li>PHP</li>
+                    <li>Laravel</li>
+                    <li>MySQL</li>
+                  </ul>
+                </div>
+                
                 <p>Other useful skills</p>
                 <ul>
                   <li>Adobe Illustrator</li>
                   <li>Figma</li>
-                  <li>Microsoft Suites</li>
+                  <li>GitHub</li>
                   <li>AutoCad</li>
                 </ul>
               </div>
@@ -101,7 +112,7 @@
                     <p>
                       Full-stack Web Developer<br />
                       KODEGO Bootcamp<br />
-                      (2022-present)
+                      (Sept.2022 -Dec.2022)
                     </p>
                   </li>
                 </ul>
@@ -153,7 +164,7 @@
                         <p>Title: thePH</p>
                         <p>An E-magazine using HTML and CSS</p>
                         </div>
-                        <div><a href="#">Check it out</a></div>
+                        <div><a href="https://jhdlc12.github.io/mini_project1.github.io/">Check it out</a></div>
                         
                     </div>
                 </div>
@@ -169,7 +180,7 @@
                         <p>Title: Hello!Work</p>
                         <p>A Job-hunting website using ReactJS</p>
                         </div>
-                        <div><a href="#">Check it out</a></div>
+                        <div><a href="https://kyuru2425.github.io/helloWork.github.io/">Check it out</a></div>
                         
                     </div>
                 </div>
@@ -180,12 +191,12 @@
 
                     </div>
                     <div class="back">
-                        <div>
-                            <p>Assignment</p>
-                        <p>Title: Form Validation</p>
-                        <p>Validate a form using Javascript</p>
-                        </div>
-                        <div><a href="#">Check it out</a></div>
+                      <div>
+                        <p>Mini Project 3</p>
+                    <p>Title: RetroFantasy</p>
+                    <p>A online game store using HTML, CSS, PHP and MySQL</p>
+                    </div>
+                        <div><a href="https://github.com/kyuru2425/retrofantasy">Check it out</a></div>
                         
                     </div>
                 </div>
@@ -216,16 +227,16 @@
             <div class="icons">
              
               <div class="icon">
-                <a href=""><i class="bi bi-facebook"></i></a>
+                <a href="facebook.com/harold.delacruz.1614"><i class="bi bi-facebook"></i></a>
               </div>
               <div class="icon">
-                <a href=""><i class="bi bi-twitter"></i></a>
+                <a href="#"><i class="bi bi-twitter"></i></a>
               </div>
               <div class="icon">
                 <a href=""><i class="bi bi-instagram"></i></a>
               </div>
               <div class="icon">
-                <a href=""><i class="bi bi-github"></i></a>
+                <a href="https://github.com/jhdlc12"><i class="bi bi-github"></i></a>
               </div>
               <div class="icon">
                 <a href=""><i class="bi bi-linkedin"></i></a>
@@ -250,6 +261,21 @@
     </div>
 </div>
 
+ 
+    <script>
+      var i = 0;
+      var txt = "John Harold T. Dela cruz"; /* The text */
+      var speed = 100; /* The speed/duration of the effect in milliseconds */
+
+      function typeWriter() {
+        if (i < txt.length) {
+          document.getElementById("demo").innerHTML += txt.charAt(i);
+          i++;
+          setTimeout(typeWriter, speed);
+        }
+      }
+      typeWriter();
+    </script>
 
   </body>
 </html>

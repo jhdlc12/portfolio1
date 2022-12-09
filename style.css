@@ -81,6 +81,7 @@ nav img {
   max-width: 100%;
   min-width: 200px;
 }
+
 .resume {
   padding: 5px 10px;
   border: 2px solid var(--clr-line-color);
@@ -88,13 +89,57 @@ nav img {
   outline-offset: 2px;
   background-color: var(--clr-bg-color);
 }
+/* ------------------bounce animation in button---------- */
+.animated {
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  -webkit-animation-delay: 2.2s;
+  animation-delay: 2.2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: bounce;
+  animation-name: bounce;
+}
+
+@-webkit-keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    -webkit-transform: scale(1);
+  }
+  40% {
+    -webkit-transform: scale(2);
+  }
+  60% {
+    -webkit-transform: scale(1.5);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(2);
+  }
+  60% {
+    transform: scale(1.5);
+  }
+}
+/* --------------------------------------------------------- */
 .resume:hover {
   outline-offset: 4px;
 }
 .aboutContainer {
   background-color: var(--clr-bg-color);
   width: 80vw;
-  height: 70vh;
+  min-height: 70vh;
   padding: 5vh;
   border: 5px double var(--clr-line-color);
 }
